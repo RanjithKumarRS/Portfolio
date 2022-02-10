@@ -1,0 +1,347 @@
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@300;400;700&family=Neonderthaw&display=swap');
+:root{
+    --bg-color: #f5a1a1;
+    --border:.1rem solid rgba(0,0,0,.2);
+    --box-shadow:.2rem .2rem .1rem rgb(209, 88, 88),
+                 -.2rem -.2rem .1rem rgb(252, 126, 126);
+    --box-shadow-inset:.2rem .2rem .1rem rgb(209, 88, 88)inset,
+                       -.2rem -.2rem .1rem rgb(252, 126, 126)inset;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Dongle', sans-serif;
+    font-size: 1.35rem;
+}
+
+body{
+    background-color: var(--bg-color);
+}
+
+
+.header{
+    position: fixed;
+    width: 15vw;
+    height: 100%;
+    background-color: var(--bg-color);
+    border-right: var(--border);
+    z-index: 999;
+    text-align: center;
+}
+
+#bar{
+  display: none;   
+}
+
+.header img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    border: 5px solid #f5a1a1;
+    margin-top:40px;
+}
+
+.header h3{
+     font-weight:800;
+    font-size: 1.6rem;
+}
+
+.header nav a{
+    display: block;
+     color: black;
+     margin-top: 30px;
+     box-shadow: var(--box-shadow);
+     border-radius: 30px;
+     margin-left: 10px;
+     margin-right: 10px;
+     padding:0px 5px;
+}
+
+.header nav a:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+@media  screen and (max-width:1000px) {
+    #bar{
+        display:initial;
+        position: fixed;
+        z-index: 1000;
+        top: 10px;left: 5px;
+        font-size: .8rem;
+        padding:5px 8px;
+        box-shadow: var(--box-shadow);
+        border-radius: 30px;
+    }
+    #bar:hover{
+        box-shadow: var(--box-shadow-inset);
+    }
+
+    .header{
+         margin-left: -150px;
+    }
+
+    .active{
+        width: 30vw;
+        margin-left: 0;
+        transition: .3s linear;
+    }
+}
+
+@media  screen and (max-width:600px) {
+    .active{
+        width: 50vw;
+        margin-left: 0;
+    }
+}
+    
+
+section{
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items:center;
+    min-height: 700px;
+    text-align: center;
+}
+
+.heading h3{
+    font-size: 3rem;
+}
+
+/* -------home_start------ */
+
+.home h3{
+    margin-top: 100px;
+    font-weight: 900;
+    font-size: 3rem;
+}
+
+.home p{
+    margin-top: -15px;
+    color: rgb(79, 170, 143);
+}
+
+.home a{
+    margin-top: 15px;
+    color: black;
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+    padding: 0px 15px;
+}
+
+.home a:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+.icon{
+    margin-top:80px;
+    margin-bottom: 50px;
+}
+
+ .icon a{
+     color: black;
+     border-radius: 40% 10%;
+     box-shadow: var(--box-shadow);
+     margin-left: 30px;
+     padding: 10px 10px 0px 10px;
+}
+
+ .icon a i{
+    justify-content: center;
+}
+
+ .icon a:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+
+/* ------home_end----- */
+
+/* ------about_start----- */
+
+.about img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: var(--box-shadow);
+    border: 5px solid #f5a1a1;
+    margin-top: 30px;
+}
+
+.about p{
+    text-align: justify;
+    margin: 40px 100px 0px 250px;
+}
+
+.about a{
+    color: black;
+    text-align: center;
+    margin-top: 30px;
+    padding: 3px 10px;
+    border-radius: 30px 10px;
+    box-shadow: var(--box-shadow);
+}
+
+.about a:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+@media screen and (max-width:1000px) {
+    .about p{
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+}
+
+/* ------about_end----- */
+
+/* ------photo_start----- */
+
+.photo-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-left:80px;
+    margin-right: 0px;
+    cursor: pointer;
+}
+
+.photo-content img{
+    width: 20vw;
+    height: 60vh;
+    margin-left: 15px;
+    padding: 10px;
+    box-shadow: var(--box-shadow);
+    border-radius:50px 10px;
+     
+}
+
+.photo-content img:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+@media screen and (max-width:1000px){
+    .photo-content{
+        margin-left: 0px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .photo-content img{
+        width: auto;
+    }
+}
+
+
+/* ------photo_end----- */
+
+
+
+/* ------skill_start----- */
+
+
+.skill-content .h3{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    padding: 40px 0px;
+}
+.skill-content h3{
+    display: flex;
+    padding:0px 50px;
+    line-height: 50px;
+}
+
+.skill-content h3 p{
+    margin-top: 18px;
+    width: 20vw;
+    height: 10px;
+    background-color:#fff;
+    border-radius: 14px;
+    position: relative;
+    
+}
+
+.skill-content h3 p span{
+    position: absolute;
+    background-color:rgb(43, 44, 46);
+    border-radius: 15px;
+    width: 20vw;
+    height:10px ;
+    display: flex;
+} 
+
+/* ------skill_end----- */
+
+/* ------contact_start----- */
+
+.contact-content form{
+    display: flex;
+    flex-direction: column;
+    background-color:var(--bg-color);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    min-width: 40vw;
+    height: 400px;
+    box-shadow: var(--box-shadow);    
+}
+
+.contact-content form input{
+    display: flex;
+    flex-direction: column;
+    min-width: 40vw;
+    min-height: 30px;
+    border-radius: 10px;
+    box-shadow: var(--box-shadow); 
+    margin-top: 10px;
+    background-color: var(--bg-color);
+    border: none;
+    outline: none;
+    padding: 0px 8px;
+}
+
+.contact-content form input:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+.contact-content form textarea{
+    background-color: var(--bg-color);
+    min-width: 40vw;
+    height: 30vh;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    margin-top: 10px;
+    border: none;
+    outline: none;
+    padding: 0px 8px;
+}
+
+.contact-content form textarea:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+.contact-content form button{
+    color: black;
+    background-color: var(--bg-color);
+    padding: 0px 10px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: var(--box-shadow);
+    outline: none;
+    border: none;
+    margin-top: 10px;
+} 
+
+.contact-content form button:hover{
+    box-shadow: var(--box-shadow-inset);
+}
+
+/* ------contact_end----- */
